@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D1E6CA9A-A5CA-4BBB-A496-C9846CBF5CE2}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>WebServiceStudio</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>WebServiceStudio.MainForm</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/WebServiceStudio/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.Xml</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\Dumper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Global.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\ArrayProperty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\ClassProperty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\Configuration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\NullableGenericProperty.cs" />
+    <Compile Include="WebServiceStudio\CustomHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\DataSetEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\DynamicConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\DynamicEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\IAdditionalProperties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\InvokeProperties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\Language.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\ListStandardValues.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\MessageTracer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\MessageType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\MethodProperty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\NoCloseMemoryStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\NullablePrimitiveProperty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\OptionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\PrimitiveProperty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\Protocol.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\ProxyProperties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\ProxyProperty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\RequestProperties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\Script.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\SearchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\TreeNodeProperty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\UiProperties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\Wsdl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\WsdlProperties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\WSSWebRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\WSSWebRequestCreate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\WSSWebResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\XmlAttributeProperty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\XmlElementProperty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\XmlTreeNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceStudio\XmlTreeWriter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="WebServiceStudio.WebServiceStudio.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
