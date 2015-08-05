@@ -790,7 +790,7 @@ namespace WebServiceStudio
         private void menuItemAbout_Click(object sender, EventArgs e)
         {
             MessageBox.Show(this,
-                ".NET Web Service Studio 2.1 \nIdeas and suggestions - Please mailto:adnan@nova.edu");
+                ".NET Web Service Studio 2.2 \nIdeas and suggestions - Please mailto:adnan@nova.edu");
         }
 
         private void menuItemExit_Click(object sender, EventArgs e)
