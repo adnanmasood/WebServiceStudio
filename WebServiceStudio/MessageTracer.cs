@@ -113,9 +113,16 @@ namespace WebServiceStudio
             if ((contentType.StartsWith("text/xml") || contentType.StartsWith("application/soap+xml")) ||
                 (contentType == "http://schemas.xmlsoap.org/soap/envelope/"))
             {
-                byte[] bytes = ReadStream(from, len);
-                var document = new XmlDocument();
-                document.InnerXml = GetEncoding(contentType).GetString(bytes);
+                XmlDocument document = new XmlDocument();
+                if (len >= 0)
+                {
+                    byte[] bytes = ReadStream(from, len);
+                    document.InnerXml = GetEncoding(contentType).GetString(bytes);
+                }
+                else
+                {
+                    document = ReadStream(from, GetEncoding(contentType));
+                }
                 var w = new StringWriter();
                 var writer2 = new XmlTextWriter(w);
                 writer2.Formatting = Formatting.Indented;
@@ -172,6 +179,16 @@ namespace WebServiceStudio
                 next = next.Next;
             }
             return destinationArray;
+        }
+		
+		private static XmlDocument ReadStream(Stream stream, Encoding encoder)
+        {
+            StreamReader sr = new StreamReader(stream, encoder);
+            String retXml = sr.ReadToEnd();
+            sr.Close();
+            XmlDocument doc = new XmlDocument();
+            doc.LoadXml(retXml);
+            return doc;
         }
 
         internal static int WriteMessage(Stream stream, string contentType, string str)
