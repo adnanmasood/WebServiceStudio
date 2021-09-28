@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Reflection;
 using System.Text;
@@ -101,6 +102,7 @@ namespace WebServiceStudio
 
         private void buttonGet_Click(object sender, EventArgs e)
         {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11;
             if (buttonGet.Text == "Get")
             {
                 ClearAllTabs();
@@ -214,7 +216,8 @@ namespace WebServiceStudio
                             protocol2.CookieContainer = new CookieContainer();
                             protocol2.AllowAutoRedirect = true;
                         }
-                        foreach (MethodInfo info in type.GetMethods())
+
+                        foreach (MethodInfo info in type.GetMethods().OrderBy(x => x.Name).ToList())
                         {
                             if (TreeNodeProperty.IsWebMethod(info))
                             {
@@ -719,6 +722,7 @@ namespace WebServiceStudio
 
         private void InvokeWebMethod()
         {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
             MethodProperty currentMethodProperty = GetCurrentMethodProperty();
             if (currentMethodProperty != null)
             {
